@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ebook Support — Phát hành Công khai &amp; Bộ cài Windows</title>
+  <style>
+    :root {
+      --bg: #f9f6ef;
+      --surface: #ffffff;
+      --border: #e5dccb;
+      --text: #1f1a14;
+      --muted: #665845;
+      --accent: #b45309;
+      --accent-dark: #92400e;
+      --soft: #fef3c7;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 36px 20px 64px; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--soft); color: var(--accent-dark);
+      border: 1px solid #f59e0b66; border-radius: 999px;
+      padding: 4px 14px; font-size: 12px; font-weight: 700;
+    }
+    h1 { font-size: clamp(28px, 4.2vw, 42px); line-height: 1.2; margin: 14px 0 12px; }
+    .lead { font-size: 16px; color: var(--muted); max-width: 720px; margin: 0 0 26px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 34px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 12px 20px; border-radius: 12px; font-size: 14px; font-weight: 700;
+      text-decoration: none; border: 1px solid var(--border); cursor: pointer;
+      transition: transform 0.12s ease, opacity 0.15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); opacity: 0.94; }
+    .btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .btn-secondary { background: var(--surface); color: var(--text); }
+    .card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 18px; padding: 24px; margin-bottom: 22px;
+      box-shadow: 0 6px 24px rgba(60, 42, 16, 0.05);
+    }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+    .feat {
+      background: #fcfaf5; border: 1px solid var(--border);
+      border-radius: 14px; padding: 16px;
+    }
+    .feat h3 { margin: 0 0 6px; font-size: 15px; color: var(--accent-dark); }
+    .feat p { margin: 0; font-size: 13px; color: var(--muted); }
+    .asset-row {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 10px; padding: 12px 14px; border: 1px solid var(--border);
+      border-radius: 12px; margin-top: 10px; background: #fcfaf5;
+    }
+    .notes {
+      white-space: pre-wrap; font-size: 13px; color: var(--muted);
+      background: #fcfaf5; border: 1px solid var(--border);
+      border-radius: 12px; padding: 16px; margin-top: 12px;
+    }
+    footer { text-align: center; font-size: 12px; color: var(--muted); margin-top: 32px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="badge" id="version-badge">Phiên bản mới nhất: v0.2.0 • Windows &amp; Web</div>
+    <h1>Ebook Support — Kindle E-Ink Studio &amp; Reader</h1>
+    <p class="lead">
+      Trang phát hành công khai độc lập với mã nguồn. Tải trực tiếp bộ cài đặt Windows (<code>.exe</code> / <code>.msi</code>) hoặc mở nhanh phiên bản Web Studio ngay trên trình duyệt.
+    </p>
+
+    <div class="actions">
+      <a class="btn btn-primary" id="btn-exe" href="https://github.com/CuongNguyenDAU/ebook-support-releases/releases/download/app-v0.2.0/Ebook.Support_0.2.0_x64-setup.exe">
+        ⬇ Tải Bộ cài Windows (.exe)
+      </a>
+      <a class="btn btn-secondary" id="btn-msi" href="https://github.com/CuongNguyenDAU/ebook-support-releases/releases/download/app-v0.2.0/Ebook.Support_0.2.0_x64_en-US.msi">
+        📦 Tải Gói cài MSI (.msi)
+      </a>
+      <a class="btn btn-secondary" href="./app/">
+        🌐 Mở Web Studio trực tuyến
+      </a>
+      <a class="btn btn-secondary" id="btn-releases" href="https://github.com/CuongNguyenDAU/ebook-support-releases/releases" target="_blank" rel="noreferrer">
+        🏷 Danh sách Releases
+      </a>
+    </div>
+
+    <div class="card">
+      <h2 style="margin:0 0 8px;font-size:18px;">Thông tin Bản Phát Hành (<span id="rel-name">Ebook Support v0.2.0</span>)</h2>
+      <div style="font-size:13px;color:var(--muted);" id="rel-date">Cập nhật tự động từ GitHub Releases Public</div>
+      <div id="assets-box">
+        <div class="asset-row">
+          <div><strong>Ebook.Support_0.2.0_x64-setup.exe</strong><div style="font-size:12px;color:var(--muted);">Bộ cài NSIS Windows 64-bit</div></div>
+          <a class="btn btn-primary" style="padding:8px 14px;font-size:12px;" href="https://github.com/CuongNguyenDAU/ebook-support-releases/releases/download/app-v0.2.0/Ebook.Support_0.2.0_x64-setup.exe">Tải về</a>
+        </div>
+        <div class="asset-row">
+          <div><strong>Ebook.Support_0.2.0_x64_en-US.msi</strong><div style="font-size:12px;color:var(--muted);">Gói cài đặt MSI chuẩn Windows</div></div>
+          <a class="btn btn-secondary" style="padding:8px 14px;font-size:12px;" href="https://github.com/CuongNguyenDAU/ebook-support-releases/releases/download/app-v0.2.0/Ebook.Support_0.2.0_x64_en-US.msi">Tải về</a>
+        </div>
+      </div>
+      <div class="notes" id="rel-notes">• Trung tâm Cập nhật &amp; GitHub Releases tích hợp sẵn (1-Click Update trong ứng dụng).
+• Đọc giọng nói AI tiếng Việt chuẩn Microsoft Edge-TTS (Hoài My / Nam Minh) kèm tải trước 2 câu kế tiếp và xuất MP3.
+• Tăng tốc nạp truyện dài: tách tầng lưu trữ IndexedDB siêu nhẹ, giải mã EPUB/MOBI/AZW3 nhanh và chỉ render trang đang hiển thị.
+• Chuyển đổi đa chiều EPUB ↔ MOBI ↔ AZW3 ↔ DOCX ↔ MD, tối ưu PDF E-Ink và đồng bộ Kindle qua Email/USB.</div>
+    </div>
+
+    <div class="grid">
+      <div class="feat">
+        <h3>1. Trình đọc Bảo vệ mắt</h3>
+        <p>Chế độ 1 trang, 2 trang mở đôi như sách giấy, lọc ánh sáng xanh 0–100%, 6 chủ đề đọc, thước đọc tập trung và hỏi đáp AI Gemini.</p>
+      </div>
+      <div class="feat">
+        <h3>2. Chuyển đổi 5 Định dạng</h3>
+        <p>Chuyển đổi 2 chiều giữa EPUB, MOBI, AZW3, DOCX, Markdown; tự động chuẩn hóa tiếng Việt, công thức LaTeX và ảnh 16 mức xám.</p>
+      </div>
+      <div class="feat">
+        <h3>3. Tối ưu PDF &amp; Gửi Kindle</h3>
+        <p>Cắt viền trắng tự động, tách trang đôi, làm đậm nét chữ E-Ink, giả lập 4 dòng máy Kindle và đồng bộ Email / cáp USB.</p>
+      </div>
+    </div>
+
+    <footer>Ebook Support Release Portal • Hosted on GitHub Pages</footer>
+  </div>
+
+  <script>
+    fetch("https://api.github.com/repos/CuongNguyenDAU/ebook-support-releases/releases/latest")
+      .then((r) => (r.ok ? r.json() : null))
+      .then((rel) => {
+        if (!rel || !rel.tag_name) return;
+        const ver = rel.tag_name.replace(/^app-v/i, "").replace(/^v/i, "");
+        document.getElementById("version-badge").textContent = "Phiên bản mới nhất: v" + ver + " • Windows & Web";
+        document.getElementById("rel-name").textContent = rel.name || rel.tag_name;
+        if (rel.published_at) {
+          document.getElementById("rel-date").textContent = "Ngày phát hành: " + new Date(rel.published_at).toLocaleString("vi-VN");
+        }
+        if (rel.body) {
+          document.getElementById("rel-notes").textContent = rel.body;
+        }
+        if (rel.html_url) {
+          document.getElementById("btn-releases").href = rel.html_url;
+        }
+        const assets = Array.isArray(rel.assets) ? rel.assets : [];
+        const exe = assets.find((a) => a.name.toLowerCase().endsWith(".exe"));
+        const msi = assets.find((a) => a.name.toLowerCase().endsWith(".msi"));
+        if (exe) document.getElementById("btn-exe").href = exe.browser_download_url;
+        if (msi) document.getElementById("btn-msi").href = msi.browser_download_url;
+        if (assets.length > 0) {
+          document.getElementById("assets-box").innerHTML = assets.map((a) => `
+            <div class="asset-row">
+              <div><strong>${a.name}</strong><div style="font-size:12px;color:var(--muted);">${(a.size / (1024 * 1024)).toFixed(2)} MB</div></div>
+              <a class="btn btn-secondary" style="padding:8px 14px;font-size:12px;" href="${a.browser_download_url}">Tải về</a>
+            </div>
+          `).join("");
+        }
+      })
+      .catch(() => {});
+  </script>
+</body>
+</html>
