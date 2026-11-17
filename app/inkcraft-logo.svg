@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <!-- Squircle E-Ink Charcoal Surface -->
+    <linearGradient id="bgGrad" x1="48" y1="32" x2="464" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#292524" />
+      <stop offset="50%" stop-color="#1C1917" />
+      <stop offset="100%" stop-color="#110F0E" />
+    </linearGradient>
+
+    <!-- Subtle Warm Glow Behind Emblem -->
+    <radialGradient id="amberGlow" cx="256" cy="220" r="210" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#D97706" stop-opacity="0.16" />
+      <stop offset="65%" stop-color="#D97706" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="#1C1917" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Thin Metallic Amber Rim -->
+    <linearGradient id="rimGrad" x1="36" y1="36" x2="476" y2="476" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FBBF24" stop-opacity="0.72" />
+      <stop offset="50%" stop-color="#D97706" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#92400E" stop-opacity="0.70" />
+    </linearGradient>
+
+    <!-- Secondary Stacked Page Layer (3D Depth) -->
+    <linearGradient id="backPageGrad" x1="340" y1="120" x2="420" y2="392" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#B45309" stop-opacity="0.88" />
+      <stop offset="50%" stop-color="#92400E" stop-opacity="0.72" />
+      <stop offset="100%" stop-color="#78350F" stop-opacity="0.88" />
+    </linearGradient>
+
+    <!-- Primary Curling Book Page "C" (Warm Amber Gold) -->
+    <linearGradient id="cPageGrad" x1="120" y1="90" x2="395" y2="422" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="22%" stop-color="#F59E0B" />
+      <stop offset="65%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+
+    <!-- Highlight Bevel on C Inner Edge -->
+    <linearGradient id="cHighlightGrad" x1="140" y1="120" x2="340" y2="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FEF3C7" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.08" />
+    </linearGradient>
+
+    <!-- Fountain Pen Nib + Book Spine "I" (Sepia Paper Cream) -->
+    <linearGradient id="iNibGrad" x1="250" y1="145" x2="330" y2="375" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFBEB" />
+      <stop offset="48%" stop-color="#FEF3C7" />
+      <stop offset="100%" stop-color="#FDE68A" />
+    </linearGradient>
+
+    <!-- Amber Ferrule Collar Band -->
+    <linearGradient id="collarGrad" x1="262" y1="252" x2="318" y2="262" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="50%" stop-color="#FBBF24" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+
+    <!-- Soft Drop Shadow Filter -->
+    <filter id="emblemShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.55" />
+    </filter>
+  </defs>
+
+  <!-- Base Squircle -->
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#bgGrad)" />
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#amberGlow)" />
+  <rect x="22" y="22" width="468" height="468" rx="106" stroke="url(#rimGrad)" stroke-width="5" />
+
+  <!-- Secondary Page Layer (Fore-edge Stacked Paper Accent) -->
+  <g opacity="0.92">
+    <path
+      d="M 382 126 C 398 138, 412 152, 420 168 L 386 186 C 378 172, 368 160, 354 150 Z"
+      fill="url(#backPageGrad)"
+    />
+    <path
+      d="M 382 386 C 398 374, 412 360, 420 344 L 386 326 C 378 340, 368 352, 354 362 Z"
+      fill="url(#backPageGrad)"
+    />
+  </g>
+
+  <!-- Primary Curling Book Page Monogram "C" -->
+  <g filter="url(#emblemShadow)">
+    <path
+      d="M 402 142
+         C 362 100, 310 82, 256 82
+         C 162 82, 102 154, 102 256
+         C 102 358, 162 430, 256 430
+         C 310 430, 362 412, 402 370
+         L 368 336
+         C 338 368, 298 382, 258 382
+         C 190 382, 154 330, 154 256
+         C 154 182, 190 130, 258 130
+         C 298 130, 338 144, 368 176
+         Z"
+      fill="url(#cPageGrad)"
+    />
+    <!-- Subtle Inner Rim Sheen on C -->
+    <path
+      d="M 398 144
+         C 359 104, 308 86, 256 86
+         C 165 86, 106 156, 106 256
+         C 106 356, 165 426, 256 426"
+      stroke="url(#cHighlightGrad)"
+      stroke-width="2.5"
+      stroke-linecap="round"
+    />
+  </g>
+
+  <!-- Monogram "I": Fountain Pen Nib (Top) + Book Spine Serif Base (Bottom) -->
+  <g filter="url(#emblemShadow)">
+    <!-- Upper Fountain Pen Nib -->
+    <path
+      d="M 290 144
+         C 304 168, 322 192, 332 214
+         L 313 248
+         L 267 248
+         L 248 214
+         C 258 192, 276 168, 290 144
+         Z"
+      fill="url(#iNibGrad)"
+    />
+
+    <!-- Ink Slit & Breather Hole Cutout -->
+    <path
+      d="M 288.6 151 L 291.4 151 L 293.4 206 L 286.6 206 Z"
+      fill="#1C1917"
+    />
+    <circle cx="290" cy="208" r="9.5" fill="#1C1917" />
+
+    <!-- Amber Gold Ferrule / Spine Collar Band -->
+    <rect x="264" y="253" width="52" height="8" rx="4" fill="url(#collarGrad)" />
+
+    <!-- Lower Book Spine Stem + Serif Foot -->
+    <path
+      d="M 269 266
+         L 311 266
+         L 311 334
+         C 311 345, 320 352, 334 354
+         L 334 368
+         C 306 362, 274 362, 246 368
+         L 246 354
+         C 260 352, 269 345, 269 334
+         Z"
+      fill="url(#iNibGrad)"
+    />
+  </g>
+</svg>
